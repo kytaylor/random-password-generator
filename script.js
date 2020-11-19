@@ -7,11 +7,7 @@ var passSpecialCharacter = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();  // Try changing generatePassword to a string, but in the end it will be a function
-  var passwordText = document.querySelector("#password");
-
+function generatePassword() {
   // Asks user how long the password should be
   var length = parseInt(prompt("How many characters should the password be? Choose a number between 8 and 128."));
 
@@ -52,6 +48,14 @@ function writePassword() {
 
   console.log(passwordCharacters)
   console.log(length)
+}
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+
 
   passwordText.value = password;
 
