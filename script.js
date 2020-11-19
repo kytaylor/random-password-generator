@@ -12,6 +12,20 @@ function writePassword() {
   var password = generatePassword();  // Try changing generatePassword to a string, but in the end it will be a function
   var passwordText = document.querySelector("#password");
 
+  // Asks user how long the password should be
+  var length = parseInt(prompt("How many characters should the password be? Choose a number between 8 and 128."));
+
+  if (length < 8 || length > 128) {
+    alert("Please choose a number between 8 and 128.");
+    return;
+  }
+
+  // Asks user what parameters the password should have
+  var confirmUpperCase = confirm("Should the password contain upper case letters?");
+  var confirmLowerCase = confirm("Shoudl the password contain lower case letters?");
+  var confirmNumber = confirm("Should the password contain numbers?");
+  var confirmSpecialCharacter = confirm("Should the password contain special characters?");
+
   passwordText.value = password;
 
 }
