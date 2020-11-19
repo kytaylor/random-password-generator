@@ -26,6 +26,11 @@ function writePassword() {
   var confirmNumber = confirm("Should the password contain numbers?");
   var confirmSpecialCharacter = confirm("Should the password contain special characters?");
 
+  if (!confirmUpperCase && !confirmLowerCase && !confirmNumber && !confirmSpecialCharacter) {
+    alert("You must choose at least 1 criteria.");
+    return;
+  }
+
   passwordText.value = password;
 
 }
