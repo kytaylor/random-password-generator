@@ -31,6 +31,28 @@ function writePassword() {
     return;
   }
 
+  // Adds characters to one variable array depending on parameters chosen
+  var passwordCharacters = []
+
+  if (confirmUpperCase) {
+    passwordCharacters = passwordCharacters.concat(passUpperCase)
+  }
+
+  if (confirmLowerCase) {
+    passwordCharacters = passwordCharacters.concat(passLowerCase)
+  }
+
+  if (confirmNumber) {
+    passwordCharacters = passwordCharacters.concat(passNumber)
+  }
+
+  if (confirmSpecialCharacter) {
+    passwordCharacters = passwordCharacters.concat(passSpecialCharacter)
+  }
+
+  console.log(passwordCharacters)
+  console.log(length)
+
   passwordText.value = password;
 
 }
