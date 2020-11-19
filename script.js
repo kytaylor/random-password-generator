@@ -48,6 +48,20 @@ function generatePassword() {
 
   console.log(passwordCharacters)
   console.log(length)
+
+  // Final password generation, gets put into an array
+  var finalPassword = []
+
+  for (var i = 0; i < length; i++) {
+    var randomPassword = passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+    finalPassword.push(randomPassword);
+  }
+  console.log(finalPassword)
+
+  // Converts finalPassword into a string and returns the password
+  var passwordString = finalPassword.join("");
+  console.log(passwordString)
+  return passwordString;
 }
 
 // Write password to the #password input
