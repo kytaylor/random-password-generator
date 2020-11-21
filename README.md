@@ -6,4 +6,4 @@ https://kytaylor.github.io/random-password-generator/
 
 ## Images
 
-![Image1]()
+![Image1](https://github.com/kytaylor/random-password-generator/blob/main/assets/passwordgenerator.png)
